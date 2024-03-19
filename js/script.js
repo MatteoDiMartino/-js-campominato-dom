@@ -73,13 +73,15 @@ btn.addEventListener('click', function() {
             contentSpan.addEventListener('click', function() {
                 let numeroCliccato = parseInt(contentSpan.innerHTML);
                 if (numeriCasuali.includes(numeroCliccato)) {
-                    alert ('Hai perso')
                     contentSpan.classList.add('bg-danger');
+                    alert ('Hai perso')
+                    location.reload();
                 } else {
                     contentSpan.classList.add('bg-info');
                 }
             });
         }
+
     } else if (valoreSel === vs2.value) {
         for (let i = 1; i < 82; i++) {
             let contentSpan = document.createElement('span');
