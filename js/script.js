@@ -111,9 +111,16 @@ btn.addEventListener('click', function() {
             contentSpan.style.height = 'calc(100% / 7)';
             contentSpan.innerHTML = i;
             grid.append(contentSpan);
-            contentSpan.addEventListener('click', function () {
-                contentSpan.classList.add('bg-info');
-            })
+            contentSpan.addEventListener('click', function() {
+                let numeroCliccato = parseInt(contentSpan.innerHTML);
+                if (numeriCasuali.includes(numeroCliccato)) {
+                    contentSpan.classList.add('bg-danger');
+                    alert ('Hai perso')
+                    location.reload();
+                } else {
+                    contentSpan.classList.add('bg-info');
+                }
+            });
         }
     }
 
